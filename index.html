@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Knuckle Joint</title>
+    <style>
+      .container{
+        display: flex;
+        
+      }
+    </style>
+  </head>
+
+  <body style="background-image: url('https://img.freepik.com/premium-vector/abstract-technical-drawing-blueprint-with-gear-cogs-mechanical-engineering-tech_461812-509.jpg');background-size: cover;color: white;"
+  
+    <h1><center>Machine Design Project </center></h1>
+    <h2><center>Design of Knuckle joint</center> </h2>
+    <!-- Output -->
+    <p id="output"></p>
+
+    <!-- first Input  -->
+    <div>
+      <label for="axialForce"
+        >Enter the axial force (P) subjected to rod in newton:</label
+      >
+      <input type="number" id="axialForce" />
+    </div>
+
+    <!-- Select Input 1 -->
+    <div>
+      <label for="optionSelect">Select the option:</label>
+      <select id="optionSelect">
+        <option value="1">Choose the material</option>
+        <option value="2">Enter yield tensile strength manually</option>
+      </select>
+    </div>
+
+    <!-- Select Input 2 -->
+    <div id="materialSelection" >
+      <p>Select material from the list:</p>
+      <select id="materialSelect">
+        <option value="1">
+          Aluminium(Al6061) syt=276N/mm^2 yield crushing stress=265
+        </option>
+        <option value="2">
+          Plain carbon steel(30C8) syt=400N/mm^2 yield crushing stress=390
+        </option>
+        <option value="3">
+          Plain carbon steel(40C8) syt=380N/mm^2 yield crushing stress=370
+        </option>
+        <option value="4">
+          Plain carbon steel(45C8) syt=410N/mm^2 yield crushing stress=405
+        </option>
+        <option value="5">
+          Plain carbon steel(50C4) syt=460N/mm^2 yield crushing stress=450
+        </option>
+        <option value="6">
+          Plain carbon steel(55C8) syt=490N/mm^2 yield crushing stress=480
+        </option>
+        <option value="7">
+          Stainless steel(40C10S18) syt=600N/mm^2 yield crushing stress=580
+        </option>
+        <option value="8">
+          Stainless steel(40C15S12) syt=640N/mm^2 yield crushing stress=620
+        </option>
+      </select>
+    </div>
+
+    <!-- Second Input  -->
+    <div id="manualInput" style="display: none">
+      <div>
+        <label for="yieldStrength"
+          >Yield tensile strength (syt) in newton per mm square:</label
+        >
+        <input type="number" id="yieldStrength" />
+      </div>
+      <div>
+        <label for="crushingStress"
+          >Yield crushing stress in newton per mm square:</label
+        >
+        <input type="number" id="crushingStress" />
+      </div>
+    </div>
+    <div>
+      <label for="safetyFactor">Factor of safety:</label>
+      <input type="number" id="safetyFactor" />
+    </div>
+
+    <button id="calculateButton">Calculate</button>
+    <script src="script.js"></script>
+
+  </body>
+</html>
